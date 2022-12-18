@@ -1,0 +1,267 @@
+﻿
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* start of root. ----------- - ----- ------- ----------- */
+:root {
+  /* displays */
+  --DGRID: grid;
+  --DFLEX: flex;
+
+  /* colors */
+  --BGCOLOR: #3b5998;
+  --ALTBGCOLOR: #dfe3ee;
+  --BLACKCOLOR: #000000;
+  --WHITECOLOR: #ffffff;
+
+  /* fonts */
+  --FONTFAMILY: gabriola, "Times New Roman", "Comic Sans MS", cursive,
+    sans-serif, "Courier New", Courier, monospace, "lucida console";
+  --FONTSIZE: 1.5rem;
+  --FONTSIZEXL: 4rem;
+  --FONTBOLD: bold;
+
+  /* positions */
+  --PRELATIVE: relative;
+  --PABSOLUTE: absolute;
+
+  /* borders */
+  --BORDERRADIUS: 0.25rem;
+  --BORDERCIRCLE: 50%;
+}
+/* end of root. ----------- - ----- ------- ----------- */
+
+body {
+  min-height: 100vh;
+  font-size: var(--FONTSIZE);
+  background-color: var(--ALTBGCOLOR);
+  font-family: var(--FONTFAMILY);
+  /* position: var(--PRELATIVE); */
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--BGCOLOR);
+  color: var(--WHITECOLOR);
+  margin-bottom: 0.5rem;
+}
+
+header .container {
+  display: var(--DGRID);
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 0.2rem;
+  justify-content: space-between;
+  column-gap: 11rem;
+}
+
+.logo {
+  color: var(--WHITECOLOR);
+  font-size: var(--FONTSIZEXL);
+  font-weight: var(--FONTBOLD);
+}
+
+.login-form {
+  display: var(--DFLEX);
+  justify-content: space-between;
+  align-items: center;
+  height: 0.1rem;
+  padding: 1rem;
+}
+
+.login-form div:first-child {
+  margin-top: -2.6rem;
+}
+
+.login-form div:nth-child(2) p {
+  color: #8b9dc3;
+}
+
+.login-form input[type="submit"] {
+  padding: 0.2rem;
+  color: var(--WHITECOLOR);
+  border: 0.01rem groove var(--BGCOLOR);
+  background-color: #3c5ba0;
+  /* background-color: #8B9DC3; */
+  font-weight: var(--FONTBOLD);
+  height: auto;
+}
+
+main {
+  max-width: 57rem;
+  display: var(--DGRID);
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  column-gap: 11rem;
+}
+
+.accounts {
+  margin-top: 1.2rem;
+  display: var(--DFLEX);
+  gap: 1.5rem;
+}
+
+.image-div, .add-account-div {
+  width: 10rem;
+  background-color: #f7f7f7;
+  border-radius: 0.25rem;
+  position: var(--PRELATIVE);
+}
+
+.image-div img {
+  width: 100%;
+  height: 10rem;
+  border-radius: var(--BORDERRADIUS) var(--BORDERRADIUS) 0 0;
+}
+
+.image-div p {
+  text-align: center;
+  margin-top: -1rem;
+}
+
+.image-div span:nth-of-type(1), .image-div span:nth-of-type(2) {
+  position: var(--PABSOLUTE);
+  border-radius: var(--BORDERCIRCLE);
+  color: var(--WHITECOLOR);
+
+  /* border: 0.5rem solid black; */
+}
+
+.image-div span:nth-of-type(1) {
+  top: -0.5rem;
+  right: -0.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+  background-color: #da0404;
+}
+
+.image-div span:nth-of-type(2) {
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.2rem;
+  background-color: #a39a9a;
+}
+
+.add-account-div > div {
+  height: 10rem;
+}
+
+.add-account-div > div > p {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: var(--FONTSIZEXL);
+  font-weight: var(--FONTBOLD);
+  color: var(--WHITECOLOR);
+  background-color: var(--BGCOLOR);
+  border-radius: var(--BORDERCIRCLE);
+}
+
+.add-account-div > p {
+  background-color: #ffffff;
+  color: var(--BGCOLOR);
+  text-align: center;
+}
+
+.create-account-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 2fr);
+  gap: 0.7rem;
+}
+
+.create-account-form div:first-child {
+  grid-column: 1 / 3;
+}
+
+.create-account-form div:nth-child(2) {
+  grid-column: 3 / 5;
+}
+
+.create-account-form div:nth-child(3) {
+  grid-column: 1 / 5;
+}
+
+.create-account-form div:nth-child(4) {
+  grid-column: 1 / 5;
+}
+
+.create-account-form div:nth-child(5) {
+  grid-column: 1 / 5;
+}
+
+.create-account-form div:nth-child(6) {
+  grid-column: 1 / 5;
+}
+
+.create-account-form div:nth-child(7) {
+  grid-column: 1 / 5;
+}
+
+.first-name, .surname, .email, .password {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.25rem;
+  border-style: none;
+  outline-style: none;
+  padding-left: 0.5rem;
+}
+
+.birthday {
+  top: -5rem;
+  line-height: 0.5;
+}
+
+.sex > input {
+  margin-left: 0.7rem;
+  background-color: var(--ALTBGCOLOR);
+}
+
+.sex > input:nth-child(2) {
+  margin-left: 2.5rem;
+}
+
+.create-account-form input[type=submit] {
+  background-color: #429f43;
+  color: var(--WHITECOLOR);
+  padding: 0.6rem;
+  grid-column: 1 / 3;
+  border-radius: 0.25rem;
+  border-style: none;
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.terms {
+  text-decoration: none;
+  line-height: 1;
+  color: #808080;
+}
+
+.terms a, small, .create-page a {
+  text-decoration: none;
+  color: var(--BGCOLOR);
+}
+
+.create-page {
+  color: #808080;
+}
+
+aside {
+  background-color: var(--BLACKCOLOR);
+  color: var(--WHITECOLOR);
+  width: 25rem;
+  line-height: 1;
+  border-top-right-radius: var(--BORDERRADIUS);
+  position: var(--PABSOLUTE);
+  bottom: 0.07rem;
+}
